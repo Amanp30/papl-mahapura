@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.theTable {
+  margin: auto;
+  width: 96%;
+  padding-top: 2em;
+  overflow-x: auto;
+}
+
+.tableGrid {
+  /* padding: 1em; */
+  display: grid;
+  align-items: center;
+  /* gap: 0.5em; */
+
+  grid-template:
+    auto/ minmax(50px, 50px) minmax(40px, 40px) minmax(120px, 130px)
+    minmax(130px, 150px) minmax(185px, 150px) minmax(80px, 150px)
+    minmax(90px, 150px) minmax(45px, 150px) minmax(240px, 500px) minmax(
+      240px,
+      500px
+    )
+    minmax(120px, 150px) minmax(180px, 150px) minmax(120px, 200px);
+}
+
+.tableGrid div {
+  padding: 1em;
+  border-right: 2px solid #cac6c6; /* This sets the border color to red */
+}
+
+.tableGrid div:last-child {
+  border-right: none;
+}
+
+.tableHeader {
+  background-color: rgb(194, 245, 245);
+  font-weight: bold;
+}
+
+.numberCount {
+  text-align: center;
+}
+
+.checkBox {
+  accent-color: rgb(0, 21, 255);
+  -webkit-accent-color: rgb(0, 21, 255);
+}
+
+#tableContent .tableGrid {
+  padding: 0;
+  align-items: stretch;
+}
+#tableContent .tableGrid div {
+  padding: 1em;
+  align-items: center;
+  display: flex;
+  border: 1px solid #cac6c6;
+}

@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+input[type="radio"] {
+  accent-color: blue;
+}
+
+.gridContainer {
+  width: 96%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.6fr 2fr;
+  gap: 1em;
+  height: calc(100vh - 2em);
+}
+
+.gridv2 {
+  display: grid;
+  grid-template-columns: 150px calc(100% - 150px);
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.gridv2 label {
+  font-weight: 600;
+  float: left;
+  /* min-width: 100px;
+    max-width: 100vw; */
+}
+
+.gridv2 label span {
+  color: red;
+}
+
+.ec2 {
+  padding: 0 1em;
+  border-right: 1px solid;
+  height: calc(100vh - 2em);
+  width: 400px;
+}
+
+.inputpd {
+  padding: 0.4em;
+  border: 1px solid;
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  width: 100%;
+}
+.flex input[type="text"] {
+  width: 50px;
+}
+
+.viewBtn {
+  width: auto;
+  display: flex;
+
+  margin: auto;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 2px solid black;
+  background: linear-gradient(360deg, #3faeb5, #3fa4b596);
+  color: white;
+}
+
+input[type="date"] {
+  width: 130%;
+}
+
+input[type="date"],
+input[type="time"] {
+  position: relative;
+}
+/* Target the date input's calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background-color: #844242d0;
+  filter: invert(100%) sepia(0%) saturate(7477%) hue-rotate(57deg)
+    brightness(98%) contrast(107%);
+
+  color: white;
+  padding: 0.5em;
+  font-size: 16px;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+}
+
+.topBar {
+  display: grid;
+  grid-template-columns: 2em 100%;
+  align-items: center;
+}
+
+.arrowBtn {
+  border: none;
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: #3fa4b596;
+  color: white;
+}
+
+.flexWithCenter {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.flexWithCenter p {
+  font-weight: 600;
+}
+.flexWithCenter p span {
+  color: blue;
+  font-weight: normal;
+}
+
+.theTable {
+  position: relative;
+}
+
+.theTable .theHeading {
+  position: sticky;
+  top: 0;
+}
+
+.theGrid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px 0px black;
+}
+
+.theGrid div {
+  border-right: 1px solid rgb(151, 149, 149);
+  padding: 0.6em 1em;
+}
+
+.theGrid:not(:has(.theHeading)) > div:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.theGrid:not(:has(.theHeading)) > div:last-child {
+  border-radius: 0 10px 10px 0;
+  border: none;
+}
+
+.theHeading {
+  font-weight: bold;
+  background: #3c8e9df4;
+}
+.theHeading div {
+  border: none;
+  border-right: 1px solid rgb(151, 149, 149);
+}
+
+.theGrid :first-child {
+  text-align: center;
+}
+
+.firstTable {
+  height: calc(100vh - 1em - 50vh);
+  overflow-y: auto;
+  margin-bottom: 2em;
+}
+
+.secondTable {
+  height: calc(100vh - 2em - 55vh);
+  overflow-y: auto;
+}
+
+.secondTable .theGrid {
+  grid-template-columns: 0.5fr repeat(5, 1fr);
+}

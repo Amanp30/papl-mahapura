@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/styles/screen3.css" />
+  </head>
+  <body>
+    <a href="index.html" class="menuLink">Index</a>
+    <a href="screen2.html" class="menuLink">Screen 2</a>
+    <a href="screen3.html" class="menuLink">Screen 3</a>
+
+    <div class="gridContainer">
+      <div class="ec2">
+        <div class="gridv2">
+          <label>Select Group<span>*</span></label>
+          <select class="inputpd">
+            <option value="All">All</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <div class="gridv2">
+          <label>Select Vehicles <span>*</span></label>
+          <input type="text" class="inputpd" placeholder="Vehicle" />
+        </div>
+
+        <div class="gridv2">
+          <label>Start Date <span>*</span></label>
+          <div class="flex">
+            <input type="date" class="inputpd" value="2023-09-28" />
+            <input type="time" class="inputpd" value="14:30" />
+          </div>
+        </div>
+        <div class="gridv2">
+          <label>End Date <span>*</span></label>
+          <div class="flex">
+            <input type="date" class="inputpd" value="2023-09-28" />
+            <input type="time" class="inputpd" value="14:30" />
+          </div>
+        </div>
+
+        <div class="gridv2">
+          <label>Frequency </label>
+          <input
+            type="number"
+            class="inputpd halfWD"
+            placeholder=""
+            value="2"
+          />
+        </div>
+
+        <div class="gridv2 wdCKBOX">
+          <label><input type="checkbox" />Speed Limit</label>
+          <div class="flex">
+            <input
+              type="number"
+              class="inputpd halfWD"
+              placeholder=""
+              value="40"
+            />
+            <p>(KMPH)</p>
+          </div>
+        </div>
+        <div class="gridv2 wdCKBOX">
+          <label><input type="checkbox" checked />Stop Time</label>
+          <div class="flex">
+            <input
+              type="number"
+              class="inputpd halfWD"
+              placeholder=""
+              value="30"
+            />
+            <p>(Min)</p>
+          </div>
+        </div>
+        <div class="gridv2 wdCKBOX">
+          <label><input type="checkbox" />Time Interval</label>
+          <div class="flex">
+            <input
+              type="number"
+              class="inputpd halfWD"
+              placeholder=""
+              value="10"
+            />
+            <p>(Hours)</p>
+          </div>
+        </div>
+        <div class="gridv2 wdCKBOX">
+          <label><input type="checkbox" />Location</label>
+          <div class="flex">
+            <input
+              type="number"
+              class="inputpd halfWD"
+              placeholder=""
+              value="4"
+            />
+            <p>(Grade)</p>
+          </div>
+        </div>
+
+        <div class="anotherCheckGrid wdCKBOX">
+          <label><input type="checkbox" />Unreach</label>
+          <label><input type="checkbox" />Sites</label>
+          <label><input type="checkbox" />Route Deviation</label>
+          <label><input type="checkbox" />Ignition</label>
+          <label><input type="checkbox" />Battery</label>
+        </div>
+
+        <button class="viewBtn">View</button>
+      </div>
+      <div class="rs2">
+        <div class="topBar">
+          <button class="arrowBtn"><</button>
+          <div class="flexWithCenter">
+            <p>Report: <span>Total Site Entry</span></p>
+            <p>Date: <span>Sep 16, 2023 To Sep 17, 2023</span></p>
+            <p>Stop Time: <span>01 Hours</span></p>
+            <p>Site Name: <span>Chakan</span></p>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d3676951.852774203!2d72.1225076591178!3d25.84401464598268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!3m2!1d23.022505!2d72.5713621!4m5!1s0x395d2a7b9c58c24f%3A0x41ec48d89a772ec9!2sMount%20Abu%2C%20Rajasthan!3m2!1d24.592590899999998!2d72.7156274!4m5!1s0x396f9b30c41bb44d%3A0x5f5c103200045588!2sKota%2C%20Rajasthan!3m2!1d25.2138156!2d75.8647527!4m5!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!3m2!1d26.2389469!2d73.02430939999999!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!5e0!3m2!1sen!2sin!4v1695966165748!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen="true"
+          class="theMap"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <input type="range" value="100" class="rangeInput" />
+        <div class="parent otherDetail">
+          <div class="div1">
+            <img src="./img/playICON.png" class="playIcon" />
+          </div>
+          <div class="div2">17 SEP 2023 12:37 <br />DATETIME</div>
+          <div class="div3">943.48<br />KM RUN</div>
+          <div class="div4">
+            15 <br />
+            SPEED(KM/HR)
+          </div>
+          <div class="div5">
+            20.984735<br />
+            LATITUDE
+          </div>
+          <div class="div6">
+            71.5113804<br />
+            LONGITUDE
+          </div>
+          <div class="div7">
+            <select>
+              <option value="1x">1x</option>
+              <option value="2x" selected>2x</option>
+              <option value="3x">3x</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
