@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Screen 3</title>
     <link rel="stylesheet" type="text/css" href="/styles/screen3.css" />
+    <script type="module" src="/js/screen3.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key="
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <a href="screen1.html" class="menuLink">screen 1</a>
@@ -25,21 +32,37 @@
 
         <div class="gridv2">
           <label>Select Vehicles <span>*</span></label>
-          <input type="text" class="inputpd" placeholder="Vehicle" />
+          <input
+            type="text"
+            id="vehicleBox"
+            class="inputpd"
+            placeholder="Vehicle"
+            value="RJ14GH0774"
+          />
         </div>
 
         <div class="gridv2">
           <label>Start Date <span>*</span></label>
           <div class="flex">
-            <input type="date" class="inputpd" value="2023-09-28" />
-            <input type="time" class="inputpd" value="14:30" />
+            <input
+              type="date"
+              class="inputpd"
+              id="startDate"
+              value="2023-09-20"
+            />
+            <input type="time" id="startTime" class="inputpd" value="00:00" />
           </div>
         </div>
         <div class="gridv2">
           <label>End Date <span>*</span></label>
           <div class="flex">
-            <input type="date" class="inputpd" value="2023-09-28" />
-            <input type="time" class="inputpd" value="14:30" />
+            <input
+              type="date"
+              class="inputpd"
+              id="endDate"
+              value="2023-09-20"
+            />
+            <input type="time" id="endTime" class="inputpd" value="23:59" />
           </div>
         </div>
 
@@ -54,9 +77,10 @@
         </div>
 
         <div class="gridv2 wdCKBOX">
-          <label><input type="checkbox" />Speed Limit</label>
+          <label><input type="checkbox" id="speedCheckbox" />Speed Limit</label>
           <div class="flex">
             <input
+              id="speedValue"
               type="number"
               class="inputpd halfWD"
               placeholder=""
@@ -106,58 +130,56 @@
           <label><input type="checkbox" />Unreach</label>
           <label><input type="checkbox" />Sites</label>
           <label><input type="checkbox" />Route Deviation</label>
-          <label><input type="checkbox" />Ignition</label>
+          <label
+            ><input
+              type="checkbox"
+              id="ignition"
+              data-value="false"
+            />Ignition</label
+          >
           <label><input type="checkbox" />Battery</label>
         </div>
 
-        <button class="viewBtn">View</button>
+        <button id="viewBtn" class="viewBtn">View</button>
       </div>
+
       <div class="rs2">
         <div class="topBar">
           <button class="arrowBtn"><</button>
           <div class="flexWithCenter">
             <p>Report: <span>Total Site Entry</span></p>
-            <p>Date: <span>Sep 16, 2023 To Sep 17, 2023</span></p>
+            <p>Date: <span id="topdate">from - to</span></p>
             <p>Stop Time: <span>01 Hours</span></p>
             <p>Site Name: <span>Chakan</span></p>
           </div>
         </div>
 
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d3676951.852774203!2d72.1225076591178!3d25.84401464598268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!3m2!1d23.022505!2d72.5713621!4m5!1s0x395d2a7b9c58c24f%3A0x41ec48d89a772ec9!2sMount%20Abu%2C%20Rajasthan!3m2!1d24.592590899999998!2d72.7156274!4m5!1s0x396f9b30c41bb44d%3A0x5f5c103200045588!2sKota%2C%20Rajasthan!3m2!1d25.2138156!2d75.8647527!4m5!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!3m2!1d26.2389469!2d73.02430939999999!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!5e0!3m2!1sen!2sin!4v1695966165748!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style="border: 0"
-          allowfullscreen="true"
-          class="theMap"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div id="map" class="theMap"></div>
 
         <input type="range" value="100" class="rangeInput" />
         <div class="parent otherDetail">
           <div class="div1">
             <img src="./img/playICON.png" class="playIcon" />
           </div>
-          <div class="div2">17 SEP 2023 12:37 <br />DATETIME</div>
-          <div class="div3">943.48<br />KM RUN</div>
-          <div class="div4">
-            15 <br />
+          <div class="div2"><span id="thedatetime">-</span> <br />DATETIME</div>
+          <div class="div3"><span id="kmrun">0</span><br />KM RUN</div>
+          <div class="div4" id="speedRun">
+            <span id="thespeed">0</span> <br />
             SPEED(KM/HR)
           </div>
           <div class="div5">
-            20.984735<br />
+            <span id="thelatitude">0</span> <br />
             LATITUDE
           </div>
           <div class="div6">
-            71.5113804<br />
+            <span id="thelongitude">0</span> <br />
             LONGITUDE
           </div>
           <div class="div7">
-            <select>
-              <option value="1x">1x</option>
-              <option value="2x" selected>2x</option>
-              <option value="3x">3x</option>
+            <select id="theZoom">
+              <option value="4" selected>1x</option>
+              <option value="8">2x</option>
+              <option value="12">3x</option>
             </select>
           </div>
         </div>
